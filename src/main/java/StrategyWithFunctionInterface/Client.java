@@ -39,8 +39,10 @@ public class Client {
             System.out.println("计算结果为:" + result);
 
             System.out.println("是否继续？(Y/N)");
-            Scanner readerStr = new Scanner(System.in);
-            String continueStr = readerStr.nextLine();
+            // nextInt只会读取整数内容，不会消耗换行符。nextLine会消耗换行符
+            // 在nextInt读取完成后，遗留了一个换行符，此时被nextLine读取了，所以需要多读取一次
+            reader.nextLine();
+            String continueStr = reader.nextLine();
             if ("n".equals(continueStr) || "N".equals(continueStr)) {
                 System.out.println("计算完成！程序退出...");
                 break;

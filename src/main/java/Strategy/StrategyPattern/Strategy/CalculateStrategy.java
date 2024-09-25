@@ -1,4 +1,4 @@
-package StrategyPattern.Strategy;
+package Strategy.StrategyPattern.Strategy;
 
 // 定义策略接口，不同计算方式实现这个接口
 public interface CalculateStrategy {

@@ -1,4 +1,4 @@
-package StrategyWithFunctionInterface;
+package Strategy.StrategyWithFunctionInterface;
 
 @FunctionalInterface
 public interface CalculateStrategy {

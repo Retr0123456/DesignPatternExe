@@ -1,10 +1,10 @@
-package StrategyWithGenerics;
+package Strategy.StrategyWithGenerics;
 
 
-import StrategyWithGenerics.impl.DoubleMulStrategy;
-import StrategyWithGenerics.impl.FloatDivStrategy;
-import StrategyWithGenerics.impl.IntegerAddStrategy;
-import StrategyWithGenerics.impl.LongSubStrategy;
+import Strategy.StrategyWithGenerics.impl.DoubleMulStrategy;
+import Strategy.StrategyWithGenerics.impl.FloatDivStrategy;
+import Strategy.StrategyWithGenerics.impl.IntegerAddStrategy;
+import Strategy.StrategyWithGenerics.impl.LongSubStrategy;
 
 public class Client {
 

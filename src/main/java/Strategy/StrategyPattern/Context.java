@@ -1,6 +1,6 @@
-package StrategyPattern;
+package Strategy.StrategyPattern;
 
-import StrategyPattern.Strategy.CalculateStrategy;
+import Strategy.StrategyPattern.Strategy.CalculateStrategy;
 import lombok.Setter;
 
 // 上下文组合策略接口，调用策略接口的方法

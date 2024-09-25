@@ -1,4 +1,4 @@
-package StrategyWithGenerics;
+package Strategy.StrategyWithGenerics;
 
 import java.util.HashMap;
 import java.util.Map;

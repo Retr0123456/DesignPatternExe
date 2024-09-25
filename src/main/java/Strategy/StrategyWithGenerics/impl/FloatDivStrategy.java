@@ -1,6 +1,6 @@
-package StrategyWithGenerics.impl;
+package Strategy.StrategyWithGenerics.impl;
 
-import StrategyWithGenerics.CalculateStrategy;
+import Strategy.StrategyWithGenerics.CalculateStrategy;
 
 public class FloatDivStrategy implements CalculateStrategy<Float,Double> {
     @Override

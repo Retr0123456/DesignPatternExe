@@ -1,6 +1,6 @@
-package StrategyPattern.Strategy.impl;
+package Strategy.StrategyPattern.Strategy.impl;
 
-import StrategyPattern.Strategy.CalculateStrategy;
+import Strategy.StrategyPattern.Strategy.CalculateStrategy;
 
 public class DivStrategy implements CalculateStrategy {
     @Override

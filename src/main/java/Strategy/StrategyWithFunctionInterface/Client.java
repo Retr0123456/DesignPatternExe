@@ -1,15 +1,10 @@
-package StrategyPattern;
+package Strategy.StrategyWithFunctionInterface;
 
-import StrategyPattern.Strategy.CalculateStrategy;
-import StrategyPattern.Strategy.impl.AddStrategy;
-import StrategyPattern.Strategy.impl.DivStrategy;
-import StrategyPattern.Strategy.impl.MulStrategy;
-import StrategyPattern.Strategy.impl.SubStrategy;
 
 import java.util.Scanner;
 
-// 客户端负责初始化策略、上下文，以及选择哪一种策略进行计算
 public class Client {
+
     public static void main(String[] args) {
         while (true){
             System.out.println("输入第一个数：");
@@ -30,11 +25,11 @@ public class Client {
             System.out.println("输入对于运算符的编号：");
             int operator = reader.nextInt();
 
-            CalculateStrategy  strategy = switch (operator) {
-                case 1 -> new AddStrategy();
-                case 2 -> new SubStrategy();
-                case 3 -> new MulStrategy();
-                case 4 -> new DivStrategy();
+            CalculateStrategy strategy = switch (operator) {
+                case 1 -> Double::sum;
+                case 2 -> (n1,n2) -> n1 - n2;
+                case 3 -> (n1,n2) -> n1 * n2;
+                case 4 -> (n1,n2) ->  (double) n1 / n2;
                 default -> throw new RuntimeException("请输入1-4之间的正整数（包含1和4）！");
             };
 
@@ -44,8 +39,10 @@ public class Client {
             System.out.println("计算结果为:" + result);
 
             System.out.println("是否继续？(Y/N)");
-            Scanner readerStr = new Scanner(System.in);
-            String continueStr = readerStr.nextLine();
+            // nextInt只会读取整数内容，不会消耗换行符。nextLine会消耗换行符
+            // 在nextInt读取完成后，遗留了一个换行符，此时被nextLine读取了，所以需要多读取一次
+            reader.nextLine();
+            String continueStr = reader.nextLine();
             if ("n".equals(continueStr) || "N".equals(continueStr)) {
                 System.out.println("计算完成！程序退出...");
                 break;

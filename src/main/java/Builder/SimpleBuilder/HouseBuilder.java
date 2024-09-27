@@ -7,4 +7,9 @@ public interface HouseBuilder {
     void buildDoor();
     void buildWindow();
     void buildRoof();
+
+    // 下面这种方式可以返回一个基类对象
+    // House getHouse();
+
+    // 也可以不在Builder接口定义对象，由Builder实现中直接返回具体对象
 }

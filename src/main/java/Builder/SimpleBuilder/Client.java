@@ -21,6 +21,6 @@ public class Client {
         descriptionBuilder.buildWall();
         descriptionBuilder.buildWindow();
         HouseDescription houseDescription = descriptionBuilder.getHouseDescription();
-        houseDescription.showDescription();
+        System.out.println(houseDescription);
     }
 }
